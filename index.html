@@ -3,87 +3,280 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EduSpark Landing Page</title>
+  <title>EduSpark | Responsive Landing Page</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header class="header" id="header">
     <nav class="navbar">
-      <div class="logo">EduSpark</div>
+      <a href="#home" class="logo">
+        <span class="logo-icon">✦</span>
+        EduSpark
+      </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#courses" class="nav-link">Courses</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
-      <button class="menu-btn" id="menuBtn">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu">
+        ☰
+      </button>
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Learn Skills for a Better Future</h1>
-      <p>
-        EduSpark is a simple learning platform concept designed to help students
-        explore digital skills through clear lessons and practical learning.
-      </p>
-      <a href="#courses" class="btn">Explore Courses</a>
+  <main>
+
+    <section class="hero section" id="home">
+      <div class="hero-container">
+        <div class="hero-content">
+          <p class="tagline">Online Learning Platform</p>
+
+          <h1>Learn Skills for a Better Future</h1>
+
+          <p class="hero-text">
+            EduSpark helps students build job-ready digital skills through guided
+            lessons, practical projects, and beginner-friendly learning paths.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#courses" class="btn primary-btn">Explore Courses</a>
+            <a href="#about" class="btn secondary-btn">Learn More</a>
+          </div>
+
+          <div class="stats">
+            <div>
+              <h3>10K+</h3>
+              <p>Learners</p>
+            </div>
+            <div>
+              <h3>50+</h3>
+              <p>Projects</p>
+            </div>
+            <div>
+              <h3>100%</h3>
+              <p>Beginner Friendly</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="floating-badge badge-one">HTML</div>
+          <div class="floating-badge badge-two">CSS</div>
+          <div class="floating-badge badge-three">JS</div>
+
+          <div class="learning-card">
+            <div class="card-header">
+              <span>📚</span>
+              <p>Today’s Learning Path</p>
+            </div>
+
+            <div class="progress-item">
+              <div>
+                <h4>Responsive Layout</h4>
+                <p>Completed</p>
+              </div>
+              <span class="status done">✓</span>
+            </div>
+
+            <div class="progress-item">
+              <div>
+                <h4>Interactive Navbar</h4>
+                <p>In Progress</p>
+              </div>
+              <span class="status progress">•</span>
+            </div>
+
+            <div class="progress-item">
+              <div>
+                <h4>JavaScript Practice</h4>
+                <p>Next Step</p>
+              </div>
+              <span class="status next">→</span>
+            </div>
+
+            <div class="progress-bar">
+              <span></span>
+            </div>
+
+            <p class="progress-text">70% learning progress</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="section-container about-container">
+        <div class="section-title left-title">
+          <p>About EduSpark</p>
+          <h2>Designed for students who want to start simple and grow steadily.</h2>
+        </div>
+
+        <div class="about-text">
+          <p>
+            EduSpark is a responsive landing page project created to present a
+            modern online learning platform. The page focuses on clean structure,
+            smooth navigation, interactive styling, and mobile-friendly design.
+          </p>
+
+          <p>
+            The goal of this project is to demonstrate how HTML, CSS, and
+            JavaScript can work together to create a professional and user-friendly
+            landing page.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features section" id="features">
+      <div class="section-container">
+        <div class="section-title">
+          <p>Why Choose Us</p>
+          <h2>Learning made clear, practical, and flexible.</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="info-card">
+            <span class="card-icon">🌱</span>
+            <h3>Beginner Friendly</h3>
+            <p>
+              Simple content designed for students who are starting from the basics.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <span class="card-icon">💻</span>
+            <h3>Practical Learning</h3>
+            <p>
+              Learn through examples, mini projects, and hands-on practice.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <span class="card-icon">⏰</span>
+            <h3>Flexible Access</h3>
+            <p>
+              Study at your own pace with a clean and organized learning structure.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="courses section" id="courses">
+      <div class="section-container">
+        <div class="section-title">
+          <p>Popular Courses</p>
+          <h2>Explore skills that support your tech journey.</h2>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card">
+            <span class="card-icon">🌐</span>
+            <h3>Web Development</h3>
+            <p>
+              Learn how to build responsive websites using HTML, CSS, and JavaScript.
+            </p>
+            <a href="#contact">Start Learning →</a>
+          </article>
+
+          <article class="course-card">
+            <span class="card-icon">🐍</span>
+            <h3>Python Basics</h3>
+            <p>
+              Understand programming fundamentals through beginner-friendly examples.
+            </p>
+            <a href="#contact">Start Learning →</a>
+          </article>
+
+          <article class="course-card">
+            <span class="card-icon">🎨</span>
+            <h3>UI/UX Design</h3>
+            <p>
+              Explore layout, design thinking, and user-friendly interface ideas.
+            </p>
+            <a href="#contact">Start Learning →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section">
+      <div class="section-container">
+        <div class="section-title">
+          <p>Student Feedback</p>
+          <h2>Built around simple and useful learning.</h2>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p>
+              “The clean structure makes learning feel easier and less confusing.”
+            </p>
+            <h4>Student Learner</h4>
+          </article>
+
+          <article class="testimonial-card">
+            <p>
+              “The project-based approach helped me understand how web pages are planned.”
+            </p>
+            <h4>Beginner Developer</h4>
+          </article>
+
+          <article class="testimonial-card">
+            <p>
+              “The design is simple, responsive, and easy to explore.”
+            </p>
+            <h4>Web Enthusiast</h4>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="section-container contact-container">
+        <div class="contact-content">
+          <p class="tagline">Get Started</p>
+          <h2>Start Your Learning Journey</h2>
+          <p>
+            Build your skills step by step with practical learning and a clear path.
+          </p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <input type="text" id="nameInput" placeholder="Your Name" required />
+          <input type="email" id="emailInput" placeholder="Your Email" required />
+          <textarea id="messageInput" placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit" class="btn primary-btn">Send Message</button>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>EduSpark</h3>
+        <p>Responsive Landing Page Project</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-  </section>
 
-  <section class="features" id="features">
-    <h2>Why Choose EduSpark?</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Beginner Friendly</h3>
-        <p>Simple content designed for students starting from the basics.</p>
-      </div>
-
-      <div class="card">
-        <h3>Practical Learning</h3>
-        <p>Learn through projects, examples, and hands-on practice.</p>
-      </div>
-
-      <div class="card">
-        <h3>Flexible Access</h3>
-        <p>Study at your own pace with a clean and easy learning structure.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="courses" id="courses">
-    <h2>Popular Courses</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>Learn how to build responsive websites using HTML, CSS, and JavaScript.</p>
-      </div>
-
-      <div class="card">
-        <h3>Python Basics</h3>
-        <p>Understand programming fundamentals through beginner-friendly examples.</p>
-      </div>
-
-      <div class="card">
-        <h3>UI/UX Design</h3>
-        <p>Explore layout, design thinking, and user-friendly interface ideas.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2>Start Your Learning Journey</h2>
-    <p>Build your skills step by step with practical learning.</p>
-    <a href="mailto:contact@eduspark.com" class="btn">Contact Us</a>
-  </section>
-
-  <footer>
-    <p>© 2026 EduSpark. Responsive Landing Page Project.</p>
+    <p class="footer-bottom">
+      © <span id="year"></span> EduSpark. Made for Web Development Internship Task 01.
+    </p>
   </footer>
 
   <script src="script.js"></script>
