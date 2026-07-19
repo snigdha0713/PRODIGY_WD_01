@@ -1,23 +1,33 @@
 const header = document.getElementById("header");
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
+const form = document.getElementById("contactForm");
+const message = document.getElementById("message");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
+  header.classList.toggle("scrolled", window.scrollY > 40);
 });
 
 menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+  navLinks.classList.toggle("show");
+  menuBtn.textContent = navLinks.classList.contains("show") ? "×" : "☰";
 });
 
-const links = document.querySelectorAll(".nav-links a");
-
-links.forEach((link) => {
+document.querySelectorAll("#navLinks a").forEach(link => {
   link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
+    navLinks.classList.remove("show");
+    menuBtn.textContent = "☰";
   });
 });
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  message.textContent = "Thank you! This is a demo form for the project.";
+  form.reset();
+
+  setTimeout(() => {
+    message.textContent = "";
+  }, 3500);
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
