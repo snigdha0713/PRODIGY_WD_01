@@ -29,12 +29,15 @@ section {
   scroll-margin-top: 90px;
 }
 
+/* NAVBAR */
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 99;
-  transition: 0.3s;
+  background: transparent;
+  transition: 0.3s ease;
 }
 
 header.scrolled {
@@ -44,7 +47,7 @@ header.scrolled {
 }
 
 nav {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: auto;
   padding: 22px 8%;
   display: flex;
@@ -59,22 +62,23 @@ nav {
   text-decoration: none;
 }
 
-nav ul {
+#navLinks {
   display: flex;
   gap: 12px;
   list-style: none;
+  align-items: center;
 }
 
-nav a {
+#navLinks a {
   color: var(--dark);
   text-decoration: none;
   font-weight: 700;
-  padding: 10px 14px;
-  border-radius: 22px;
-  transition: 0.3s;
+  padding: 10px 16px;
+  border-radius: 25px;
+  transition: 0.3s ease;
 }
 
-nav ul a:hover {
+#navLinks a:hover {
   color: var(--blue);
   background: #dbeafe;
 }
@@ -90,8 +94,10 @@ nav ul a:hover {
   cursor: pointer;
 }
 
+/* HERO */
 .hero {
   min-height: 100vh;
+  padding-top: 140px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
@@ -101,17 +107,19 @@ nav ul a:hover {
 
 .hero span,
 .title span {
+  display: inline-block;
   color: var(--blue);
   font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 3px;
+  margin-bottom: 14px;
 }
 
 .hero h1 {
   font-size: 62px;
   line-height: 1.1;
-  margin: 18px 0;
+  margin-bottom: 22px;
 }
 
 .hero p,
@@ -127,7 +135,7 @@ nav ul a:hover {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
-  margin: 28px 0;
+  margin: 30px 0;
 }
 
 .btn {
@@ -135,12 +143,12 @@ nav ul a:hover {
   background: var(--blue);
   color: white;
   border: none;
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 800;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
@@ -153,24 +161,19 @@ nav ul a:hover {
   color: var(--blue);
 }
 
+/* STATS */
 .stats {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
 
-.stats div,
-.hero-card,
-.card,
-form {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-}
-
 .stats div {
+  background: white;
   padding: 18px 22px;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  min-width: 145px;
 }
 
 .stats h3 {
@@ -178,20 +181,30 @@ form {
   font-size: 28px;
 }
 
+.stats p {
+  font-size: 15px;
+}
+
+/* HERO CARD */
 .hero-card {
-  padding: 35px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 38px;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
 }
 
 .hero-card h3 {
-  margin-bottom: 20px;
-  font-size: 24px;
+  margin-bottom: 22px;
+  font-size: 26px;
 }
 
 .hero-card p {
   margin: 14px 0;
-  padding: 15px;
-  border-radius: 16px;
+  padding: 16px;
+  border-radius: 18px;
   background: #f8fafc;
+  color: var(--text);
 }
 
 .bar {
@@ -199,7 +212,7 @@ form {
   background: #e2e8f0;
   border-radius: 20px;
   overflow: hidden;
-  margin: 18px 0 10px;
+  margin: 20px 0 10px;
 }
 
 .bar span {
@@ -209,27 +222,34 @@ form {
   background: linear-gradient(90deg, var(--blue), #8b5cf6);
 }
 
+/* TITLES */
 .title {
   text-align: center;
-  max-width: 750px;
+  max-width: 760px;
   margin: 0 auto 45px;
 }
 
 .title h2 {
-  font-size: 40px;
-  margin-top: 12px;
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+/* ABOUT */
+#about {
+  background: white;
 }
 
 .about-text {
-  max-width: 850px;
+  max-width: 900px;
   margin: auto;
-  text-align: center;
-  background: white;
+  background: #f8fafc;
   padding: 34px;
-  border-radius: 24px;
+  border-radius: 26px;
   border: 1px solid var(--border);
+  text-align: center;
 }
 
+/* CARDS */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -237,8 +257,12 @@ form {
 }
 
 .card {
-  padding: 34px;
-  transition: 0.3s;
+  background: white;
+  padding: 35px;
+  border-radius: 26px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
 }
 
 .card:hover {
@@ -252,6 +276,7 @@ form {
   margin-bottom: 14px;
 }
 
+/* CONTACT */
 #contact {
   background: white;
 }
@@ -259,16 +284,20 @@ form {
 form {
   max-width: 620px;
   margin: auto;
-  padding: 30px;
+  background: #f8fafc;
+  padding: 32px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 15px;
+  padding: 15px 18px;
   margin-bottom: 14px;
   border: 1px solid var(--border);
-  border-radius: 15px;
+  border-radius: 16px;
   font-size: 16px;
   outline: none;
 }
@@ -276,11 +305,16 @@ textarea {
 input:focus,
 textarea:focus {
   border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
 }
 
 textarea {
   height: 120px;
   resize: none;
+}
+
+form .btn {
+  width: 100%;
 }
 
 #message {
@@ -290,11 +324,17 @@ textarea {
   margin-top: 12px;
 }
 
+/* FOOTER */
 footer {
   background: var(--dark);
   color: white;
   text-align: center;
-  padding: 35px 20px;
+  padding: 40px 20px;
+}
+
+footer h3 {
+  font-size: 26px;
+  margin-bottom: 8px;
 }
 
 footer p {
@@ -302,35 +342,72 @@ footer p {
   margin-top: 8px;
 }
 
-@media (max-width: 850px) {
+/* RESPONSIVE */
+@media (max-width: 900px) {
   .hero,
   .grid {
     grid-template-columns: 1fr;
   }
 
   .hero h1 {
-    font-size: 42px;
+    font-size: 46px;
+  }
+
+  .hero-card {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 18px 6%;
   }
 
   #menuBtn {
     display: block;
   }
 
-  nav ul {
+  #navLinks {
     display: none;
     position: absolute;
-    top: 78px;
-    right: 8%;
-    flex-direction: column;
-    background: white;
+    top: 75px;
+    right: 6%;
     width: 230px;
+    background: white;
     padding: 18px;
     border-radius: 18px;
     box-shadow: var(--shadow);
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  nav ul.show {
+  #navLinks.show {
     display: flex;
+  }
+
+  #navLinks a {
+    display: block;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .buttons,
+  .stats {
+    flex-direction: column;
+  }
+
+  .btn {
+    text-align: center;
+  }
+
+  .title h2 {
+    font-size: 32px;
   }
 }
 
@@ -339,16 +416,18 @@ footer p {
     padding: 75px 6%;
   }
 
+  .logo {
+    font-size: 24px;
+  }
+
   .hero h1 {
     font-size: 34px;
   }
 
-  .title h2 {
-    font-size: 30px;
-  }
-
-  .buttons,
-  .stats {
-    flex-direction: column;
+  .card,
+  form,
+  .about-text,
+  .hero-card {
+    padding: 25px;
   }
 }
